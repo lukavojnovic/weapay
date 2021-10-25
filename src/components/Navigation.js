@@ -21,7 +21,7 @@ const Navigation = (props) => {
         } else {
             isActive("home")
         }
-    }, [window.location.pathname])
+    }, [])
     return (
         <div className="nav-container">
             <div className={`nav-button`} onClick={() => setIsVisible(true)}>
