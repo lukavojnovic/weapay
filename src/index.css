@@ -1,13 +1,304 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Avenir';
+    src: local('Avenir'), url(assets/Avenir.woff) format('woff');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: 'AvenirBlack';
+    src: local('AvenirBlack'), url(assets/Avenir-Font/avenir_ff/AvenirLTStd-Black.otf) format('otf');
+    font-weight: normal;
+}
+
+
+body {
+    background: linear-gradient(268.99deg, #0B1218 21.56%, rgba(43, 52, 61, 0.97) 91.79%);
+    font-family: Avenir, sans-serif;
+    color: white;
+}
+
+/*home*/
+
+.sc-logo {
+    position: absolute;
+    right: 20px;
+    bottom: 170px;
+}
+
+.sc-logo-mobile {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 10%;
+    bottom: 15%;
+}
+.home-container {
+    position: relative;
+    padding-left: 84px;
+    padding-right: 84px;
+}
+
+.title-holder {
+    font-size: 70px;
+    font-weight: 900;
+}
+
+.home-left {
+    margin-top: 112px;
+}
+
+.divider {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    width: 71px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.home-subtitle {
+    font-size: 28px;
+}
+
+.home-gradient-container {
+    z-index: -1;
+    height: 90vh;
+    width: 90%;
+    background: linear-gradient(272.7deg, #AAF0D1 2.25%, rgba(170, 240, 209, 0) 95.37%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.title-image-holder {
+    visibility: visible;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    margin-top: 60px;
+}
+
+.copyright {
+    align-self: center;
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.mobile-image {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+}
+
+.margin-right-24 {
+    margin-right: 24px;
+}
+
+.margin-right-20 {
+    margin-right: 20px;
+}
+
+.title-image-holder-mobile {
+    display: none;
+}
+
+.stores {
+    display: flex;
+}
+
+.footer-mobile {
+    display: none;
+}
+
+.weapay-title {
+    color: white;
+    opacity: 0.2;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+/*About Us*/
+.aboutUs-holder {
+    padding-bottom: 60px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.aboutUs-title {
+    margin-top: 25px;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.text-dark-aboutUs {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.aboutUs-data {
+    font-size: 16px;
+    max-width: 450px;
+}
+
+.aboutUs-data div {
+    margin-top: 24px;
+}
+
+
+/*Contact*/
+
+.contact-subtitle{
+    font-size: 20px;
+}
+
+.green-text {
+    color: #AAF0D1;
+}
+
+.contact-data {
+    max-width: 450px;
+}
+
+.form-holder {
+    margin-top: 72px;
+    max-width: 500px;
+}
+
+.input-holder .label{
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #6D7175;
+}
+
+.input-holder {
+    margin-bottom: 24px;
+}
+
+.input {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    padding-bottom: 8px;
+    width: 100%;
+    font-size: 16px;
+    font-family: Avenir, sans-serif;
+    border-bottom: 1px solid white;
+}
+
+.input:focus-visible {
+    outline: none;
+    border: none !important;
+    border-bottom: 1px solid #AAF0D1 !important;
+}
+
+.textarea-holder {
+    margin-top: 74px;
+    width: 100%;
+}
+
+.textarea {
+    width: 100%;
+    border: 1px solid #6D7175;
+    border-radius: 20px;
+    background: transparent;
+    padding: 12px;
+    resize:none;
+}
+
+.button-holder {
+    margin-top: 33px;
+}
+
+.button-holder button {
+    display: flex;
+    margin-left: auto;
+}
+
+.button-holder button:hover {
+    opacity: 0.5;
+}
+@media only screen and (max-width: 600px) {
+    .footer-mobile {
+        margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .sc-logo {
+        display: none;
+    }
+    .aboutUs-data {
+        font-size: 12px;
+    }
+
+    .aboutUs-title {
+        font-size: 25px;
+    }
+
+    .weapay-title {
+        font-size: 24px;
+    }
+
+    .home-container {
+        position: relative;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .title-holder {
+        font-size: 20px;
+        margin-top: -32px;
+    }
+
+    .home-subtitle {
+        max-width: 250px;
+        font-size: 15px;
+    }
+
+    .title-image-holder {
+        display: none;
+        margin-bottom: 55px;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .margin-right-24 {
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+
+    .title-image-holder-mobile {
+        display: block;
+    }
+
+    .home-gradient-container {
+        height: 80vh;
+    }
+
+    .stores {
+        display: block;
+        margin-bottom: 37px;
+    }
+    .copyright {
+        margin-top: 25px;
+    }
 }

@@ -1,0 +1,102 @@
+.navItem {
+    font-size: 16px;
+    color: #6D7175;
+    font-family: AvenirBlack, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+.nav-container {
+    position: relative;
+}
+
+.active {
+    color: white;
+}
+
+.nav-button {
+    display: none;
+    margin-left: 24px;
+    margin-top: 67px;
+    cursor: pointer;
+}
+
+.navItem:hover {
+    color: white;
+}
+
+.active {
+    color: white;
+}
+
+.navigation {
+    padding-top: 60px;
+    padding-left: 84px;
+    padding-right: 84px;
+}
+
+.navigation-mobile {
+    z-index: 100;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(268.99deg, #0B1218, rgba(43, 52, 61, 1));
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 64px;
+    padding-left: 24px;
+}
+
+.nav-holder {
+    background: rgba(43, 52, 61, 1);
+}
+
+.logo-mobile {
+    margin-top: -12px;
+    visibility: hidden;
+    justify-content: center;
+}
+
+.item-holder-mobile {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-holder-mobile .navItem {
+    margin-bottom: 20px;
+}
+
+.cancel-button-holder {
+    position: relative;
+}
+
+.cancel-button {
+    position: absolute;
+    right: 24px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-button {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navItem {
+        font-size: 14px;
+    }
+
+    .logo-mobile {
+        visibility: visible;
+    }
+
+}
